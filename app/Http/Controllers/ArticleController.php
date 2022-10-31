@@ -15,7 +15,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        return article::paginate(10);
     }
 
     /**
@@ -36,7 +36,7 @@ class ArticleController extends Controller
      */
     public function store(StorearticleRequest $request)
     {
-        //
+        article::create($request->all());
     }
 
     /**
